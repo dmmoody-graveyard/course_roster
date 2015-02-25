@@ -1,4 +1,8 @@
-courseRoster.controller=('StudentsCtrl', function StudentsCtrl($scope, StudentsFactory){
-  $scope.course = StudentsFactory.students;
-  $scope.StudentsFactory = StudentsFactory;
+courseRoster.controller('StudentsCtrl', function StudentsCtrl($scope, $stateParams, CoursesFactory, StudentsFactory){
+  $scope.course = StudentsFactory.findById(CoursesFactory.courses, $stateParams.courseId)
+  $scope.addStudent = function() {
+    $scope.course.students.push({ name: $scope.studentName });
+    debugger;
+    $scope.studentName = null;
+  }
 });
