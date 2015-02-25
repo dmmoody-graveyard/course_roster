@@ -1,1 +1,1 @@
-var courseRooster = angular.module('courseRoster', ['ui.router']);
+var courseRoster = angular.module('courseRoster', ['ui.router']);
