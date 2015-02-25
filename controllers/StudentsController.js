@@ -2,7 +2,6 @@ courseRoster.controller('StudentsCtrl', function StudentsCtrl($scope, $statePara
   $scope.course = StudentsFactory.findById(CoursesFactory.courses, $stateParams.courseId)
   $scope.addStudent = function() {
     $scope.course.students.push({ name: $scope.studentName });
-    debugger;
     $scope.studentName = null;
   }
 });
